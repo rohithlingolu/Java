@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int[] arr={4,5,7,6,7,7};
+       System.out.println("ENter the number to count: ");
+           int n=sc.nextInt();
+       int count=0;
+       for(int value : arr)
+       {
+           if(value==n)
+           {
+               count++;
+           }
+       }
+        System.out.println("The number "+n+" is arrive "+count+" times");
+    }
+}

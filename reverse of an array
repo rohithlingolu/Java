@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter te no.of elements: ");
+        int n=sc.nextInt();
+        int[] a=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("ENter the "+(i+1)+" element: ");
+            a[i]=sc.nextInt();
+        }
+        for(int i=0;i<n/2;i++)
+        {
+            int temp=a[i];
+            a[i]=a[n-i-1];
+            a[n-i-1]=temp;
+        }
+        System.out.println("the numbers after reversing: ");
+        for(int value : a)
+        {
+            System.out.print(value+" ");
+        }
+    }
+}

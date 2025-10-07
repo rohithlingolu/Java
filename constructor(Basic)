@@ -1,0 +1,14 @@
+import java.util.*;
+class Main{
+    String name;
+    int phoneno;
+    public Main(){
+        name="Rohith";
+        phoneno=12345;
+    }
+    public static void main(String[] args){
+        Main sc=new Main();
+        System.out.println(sc.name);
+        System.out.println(sc.phoneno);
+    }
+}

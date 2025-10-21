@@ -1,0 +1,35 @@
+import java.util.*;
+class Main{
+    public static int Sum(int k)
+    {
+        if(k==1)
+        {
+            return 1;
+        }
+        else {
+            return k*Sum(k-1);
+        }
+    }
+    public static void main(String[] args){
+        int result= Sum(5);
+        System.out.println(result);
+    }
+}
+
+import java.util.*;
+class Main{
+    public static int Sum(int k)
+    {
+        if(k>0)
+        {
+            return k+Sum(k-1);
+        }
+        else {
+            return 0;
+        }
+    }
+    public static void main(String[] args){
+        int result= Sum(5);
+        System.out.println(result);
+    }
+}

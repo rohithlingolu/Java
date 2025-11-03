@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int[] arr={5,4,3,6,8};
+        int firstlar=Integer.MIN_VALUE;
+        int seclar=Integer.MIN_VALUE;
+        int firstsmall=Integer.MAX_VALUE;
+        int secsmall=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>firstlar)
+            {
+                seclar=firstlar;
+                firstlar=arr[i];
+            }
+            else if (arr[i]>seclar && arr[i] != firstlar)
+            {
+                seclar=arr[i];
+            }
+        }
+        System.out.println("first: "+firstlar);
+        System.out.println("second largest: "+seclar);
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]<firstsmall)
+            {
+                secsmall=firstsmall;
+                firstsmall=arr[i];
+            }
+            else if (arr[i]<secsmall && arr[i]!= firstsmall)
+            {
+                secsmall=arr[i];
+            }
+        }
+        System.out.println ("first: "+firstsmall);
+        System.out.println("second largest: "+secsmall);
+    }
+}

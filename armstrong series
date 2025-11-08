@@ -1,0 +1,57 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int n=sc.nextInt();
+        int dig,sum=0;
+        int temp=n;
+        while(n>0)
+        {
+            dig=n%10;
+            sum=sum+(dig*dig*dig);
+            n=n/10;
+        }
+        if(temp==sum)
+        {
+            System.out.println("armstrong");
+        }
+        else {
+            System.out.println("not armstrong");
+        }
+    }
+}
+
+
+**//Armstrong Numbers Between Two Numbers//**
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the starting number: ");
+        int s=sc.nextInt();
+        System.out.println("Enter the ending number: ");
+        int e=sc.nextInt();
+        for(int i=s;i<=e;i++)
+        {
+            int n=i;
+            int sum=0,dig;
+            int temp=n;
+            int count=0;
+            while(n>0)
+            {
+                dig=n%10;
+                sum=sum+(dig*dig*dig);
+                n=n/10;
+
+            }
+            if (temp == sum)
+            {
+                count++;
+                System.out.print(sum+" ");
+            }
+        }
+    }
+}

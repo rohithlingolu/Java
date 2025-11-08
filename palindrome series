@@ -1,0 +1,92 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n = input.nextInt();
+        int sum=0,dig;
+        int temp=n;
+        while(n>0)
+        {
+            dig=n%10;
+            sum=sum*10+dig;
+            n=n/10;
+        }
+        if(temp==sum)
+        {
+            System.out.println("palindrome");
+        }
+        else
+        {
+            System.out.println("not palindrome");
+        }
+    }
+} 
+
+**//palindrome between 2 numbers//**
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a starting number: ");
+        int s= input.nextInt();
+        System.out.println("Enter a ending number: ");
+        int e= input.nextInt();
+        for(int a=s;a<=e;a++){
+            int n=a;
+            int sum=0,dig;
+            int temp=n;
+            while(n>0)
+            {
+                dig=n%10;
+                sum=sum*10+dig;
+                n=n/10;
+            }
+            if(temp==sum)
+            {
+                System.out.println(sum+" ");
+            }
+        }
+    }
+}
+
+**//by suing function in between 2 numbers//**
+
+import java.util.*;
+
+public class Main {
+
+    // Function to check if a number is palindrome
+    static boolean isPalindrome(int n) {
+        int temp = n;
+        int sum = 0, dig;
+
+        while (n > 0) {
+            dig = n % 10;
+            sum = sum * 10 + dig;
+            n = n / 10;
+        }
+
+        return temp == sum;  
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the starting number: ");
+        int s = input.nextInt();
+
+        System.out.print("Enter the ending number: ");
+        int e = input.nextInt();
+
+        System.out.println("Palindrome numbers between " + s + " and " + e + ":");
+
+        for (int a = s; a <= e; a++) {
+            if (isPalindrome(a)) {   // call the function
+                System.out.print(a + " ");
+            }
+        }
+    }
+}
+

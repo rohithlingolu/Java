@@ -1,0 +1,17 @@
+public class LcmHcf {
+    public static void main(String[] args) {
+        int n1 = 12, n2 = 18, hcf = 1;
+
+        // Find HCF using loop
+        for (int i = 1; i <= n1 && i <= n2; i++) {
+            if (n1 % i == 0 && n2 % i == 0)
+                hcf = i;
+        }
+
+        // Find LCM using formula
+        int lcm = (n1 * n2) / hcf;
+
+        System.out.println("HCF = " + hcf);
+        System.out.println("LCM = " + lcm);
+    }
+}

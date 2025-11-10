@@ -15,3 +15,34 @@ public class LcmHcf {
         System.out.println("LCM = " + lcm);
     }
 }
+
+
+**//for bigger numbers(use this for all test cases pass)//**
+import java.util.*;
+public class Main
+{
+    public  static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the a value: ");
+        int a=sc.nextInt();
+        System.out.println("Enter the b value: ");
+        int b=sc.nextInt();
+        int hcf=0;
+        //use if condition for a value is small
+        if(a>b)
+        {
+            a=a+b-(a=b);
+        }
+        for(int i=1;i<=a && i<=b;i++)
+        {
+            if(a%i==0 && b%i==0)
+            {
+                hcf=i;
+            }
+        }
+        int lcm=a*(b/hcf);
+        System.out.println("the lcm of a & b is "+lcm);
+        System.out.println("the hcf of b is "+hcf);
+    }
+}

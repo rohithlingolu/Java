@@ -69,3 +69,62 @@ public class Main{
 }
 
 
+
+**//count the number and we can find the number//**
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the starting number: ");
+        int s=sc.nextInt();
+        System.out.println("Enter the ending number: ");
+        int e=sc.nextInt();
+        System.out.println("Enter the count1 number: ");
+        int n=sc.nextInt();
+        System.out.println("Enter the count2 number: ");
+        int m=sc.nextInt();
+        int count=0;
+        int prime=0;
+        for(int i=s;i<=e;i++)
+        {
+            boolean flag=true;
+            if(i<=1)
+            {
+                flag=false;
+            }
+            else {
+                for(int j=2;j<=i/2;j++)
+                {
+                    if(i%j==0)
+                    {
+                        flag=false;
+                        break;
+                    }
+
+                }
+            }
+            if(flag)
+            {
+                count++;
+                System.out.println("The numbers are "+i);
+                if(count==n)
+                {
+                    prime=i;
+                }
+                
+            }
+
+        }
+        if(count>=n)
+        {
+            System.out.println("The number are "+prime);
+        }
+        else {
+            System.out.println("The number is less tha ");
+        }
+       
+    }
+}
+

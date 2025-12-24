@@ -1,0 +1,29 @@
+class Bike{
+    void bike()
+    {
+        System.out.println("bikes....");
+    }
+}
+class Types extends Bike{
+    void types()
+    {
+        System.out.println("petrol and diseal");
+    }
+}
+class Models extends Bike{
+    void models()
+    {
+        System.out.println("Duke,Ktm...etc.");
+    }
+}
+public class HierachicalInheritance{
+    public static void main(String[] args)
+    {
+        Types a=new Types();
+        a.bike();
+        a.types();
+        Models b=new Models();
+        b.bike();
+        b.models();
+    }
+}

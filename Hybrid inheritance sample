@@ -1,0 +1,25 @@
+interface A {
+    void show();
+}
+
+interface B extends A {
+    void display();
+}
+
+class C implements B {
+    public void show() {
+        System.out.println("Method from A");
+    }
+
+    public void display() {
+        System.out.println("Method from B");
+    }
+}
+
+public class HybridInheritance {
+    public static void main(String[] args) {
+        C obj = new C();
+        obj.show();
+        obj.display();
+    }
+}

@@ -1,0 +1,22 @@
+class Subject
+{
+    void show()
+    {
+        System.out.println("maths,physics..");
+    }
+}
+class Branch extends Subject
+{
+    void display()
+    {
+        System.out.println("Mpc");
+    }
+}
+public class SingleInheritance {
+    public static void main(String[] args)
+    {
+        Branch sc=new Branch();
+        sc.show();
+        sc.display();
+    }
+}

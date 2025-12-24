@@ -1,0 +1,29 @@
+class Subject
+{
+    void showSubject()
+    {
+        System.out.println("maths,physics..");
+    }
+}
+class Branch extends Subject
+{
+    void showBranch()
+    {
+        System.out.println("Mpc");
+    }
+}
+class Study extends Branch {
+    void display()
+    {
+        System.out.println("Intermediate");
+    }
+}
+public class MultipleInheritance {
+    public static void main(String[] args)
+    {
+        Study sc=new Study();
+        sc.showSubject();
+        sc.showBranch();
+        sc.display();
+    }
+}

@@ -1,0 +1,10 @@
+import java.util.*;
+import java.lang.String;
+public class Main{
+    public static void main(String[] args)
+    {
+        String str="Rohith @345";
+        String result=str.replaceAll("[@!0-9]","");
+        System.out.println(result);
+    }
+}

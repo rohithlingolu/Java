@@ -1,0 +1,26 @@
+import java.net.*;
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        ArrayList<String> names=new ArrayList<String>();
+        names.add("rohith");
+        names.add("ambika");
+        names.add("abhi");
+        System.out.println(names);   //rohith,ambika,abhi
+        for(String i:names)
+        {
+            System.out.println(i); //rohith   ambika abhi
+        }
+        names.remove(0);  
+        System.out.println(names);  //ambika, abhi
+        System.out.println(names.get(0)); //ambika
+        names.add(0,"pranav");
+         System.out.println(names);  //pranav,ambika,abhi
+         names.set(1,"sai");
+         System.out.println(names);  //pranav,sai,abhi
+         System.out.println(names.size()); //3
+        Collections.sort(names); 
+        System.out.println(names);  //abhi,pranav,sai
+    }
+}

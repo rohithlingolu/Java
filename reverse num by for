@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args)
+    {
+        int n=2465;
+        int rev=0;
+        for(;n!=0;n=n/10)   //why no initialization? ---Because num is already given before the loop.
+        {
+            int dig=n%10;
+            rev=rev*10+dig;
+        }
+        System.out.println(rev);
+    }
+}
